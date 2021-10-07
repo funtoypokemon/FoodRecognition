@@ -1,14 +1,18 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
-import { useLocation } from "react-router";
+import { useLocation, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { hostUrl, apiUrl } from "../../contexts/constants";
 import "./singlePost.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from "react-bootstrap/Button";
 
 export default function SinglePost() {
   const location = useLocation();
-  const path = location.pathname.split("/")[2];
+
+  //const path = location.pathname.split("/")[2];
+  const { postId } = useParams();
   const [post, setPost] = useState({});
   const PF = `${apiUrl}/images/`;
   const [title, setTitle] = useState("");
@@ -22,13 +26,13 @@ export default function SinglePost() {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get(`${apiUrl}/blogposts/` + path);
+      const res = await axios.get(`${apiUrl}/blogposts/` + postId);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
     };
     getPost();
-  }, [path]);
+  }, [postId]);
 
   const handleDelete = async () => {
     try {
@@ -69,14 +73,26 @@ export default function SinglePost() {
             {title}
             {post.username === username && (
               <div className="singlePostEdit">
-                <i
-                  className="singlePostIcon far fa-edit"
+                <Button
+                  className="singlePostIcon"
+                  onClick={() => setUpdateMode(true)}
+                >
+                  <FontAwesomeIcon icon="edit" color="#ffffff" />
+                </Button>
+                <Button
+                  className="singlePostIcon"
+                  onClick={handleDelete}
+                >
+                  <FontAwesomeIcon icon="trash" color="#ffffff" />
+                </Button>
+                {/* <i
+                  className="singlePostIcon fas fa-edit"
                   onClick={() => setUpdateMode(true)}
                 ></i>
                 <i
-                  className="singlePostIcon far fa-trash-alt"
-                  onClick={handleDelete}
-                ></i>
+                  className="singlePostIcon fas fa-trash"
+                  
+                ></i> */}
               </div>
             )}
           </h1>
@@ -84,8 +100,7 @@ export default function SinglePost() {
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
             Author:
-            <Link to={`${apiUrl}/?user=${post.username}`} className="link">
-              {" "}
+            <Link to={`/?user=${post.username}`} className="link">
               {/* Wrongpath? */}
               <b> {post.username}</b>
             </Link>

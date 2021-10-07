@@ -49,7 +49,7 @@ const Dashboard = () => {
         <Card className="text-center mx-5 my-5">
           <Card.Header as="h1">Hi {username}</Card.Header>
           <Card.Body>
-            <Card.Title>Welcome to LaCuisine</Card.Title>
+            <Card.Title>Have a good day!</Card.Title>
             <Card.Text>
               Click the button below to build your recipe to learn
             </Card.Text>
@@ -77,7 +77,7 @@ const Dashboard = () => {
         {/* Open Add Post Modal */}
         <OverlayTrigger
           placement="left"
-          overlay={<Tooltip>Add a new thing to learn</Tooltip>}
+          overlay={<Tooltip>Add new thing to learn</Tooltip>}
         >
           <Button
             className="btn-floating"

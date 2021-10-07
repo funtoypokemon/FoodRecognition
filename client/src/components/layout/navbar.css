@@ -1,0 +1,37 @@
+.navTrans{
+    transition: top 0.6s;
+    height:85px;
+    box-shadow: 0 2px 20px gray;
+    background: linear-gradient(90deg, rgb(31, 139, 240) 0%, rgb(117, 136, 170) 100%);
+    justify-content: center;
+    align-items: center;
+    font-size: 1.0rem;
+    position: sticky;
+}
+.loBtn{
+    background: linear-gradient(90deg, rgb(248, 97, 155) 0%, rgb(202, 164, 121) 100%);
+    width:127px;
+    height:54px;
+    font-size: 15px;
+}
+.headroom {
+    top: 0;
+    left: 0;
+    right: 0;
+    zIndex: 1;
+  }
+  .headroom--unfixed {
+    position: relative;
+    transform: translateY(0);
+  }
+  .headroom--scrolled {
+    transition: transform 500ms ease-in-out;
+  }
+  .headroom--unpinned {
+    position: fixed;
+    transform: translateY(-100%);
+  }
+  .headroom--pinned {
+    position: fixed;
+    transform: translateY(0%);
+  }

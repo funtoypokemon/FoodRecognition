@@ -6,6 +6,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import "./ingredient.css";
 
 const Ingredient = () => {
   const [imgfile, setImgFile] = useState(null);
@@ -94,7 +95,8 @@ const Ingredient = () => {
           type="file"
           id="file"
           name="file"
-          className=""
+
+          className="custom-file-input"
           style={{ marginTop: 20, marginLeft: 49 }}
           onChange={handleUpload}
         />
@@ -103,7 +105,7 @@ const Ingredient = () => {
             <img className="ingImg" src={URL.createObjectURL(imgfile)} alt="" />
           )}
         </div>
-        <Card className="text-center mx-5 my-5">
+        <Card className="text-center mx-5 my-5 ingCol">
           <Card.Body>
             <Button variant="primary" onClick={getIngre}>
               Predict
@@ -118,8 +120,8 @@ const Ingredient = () => {
     <>
       <Row>
         <Col>{body}</Col>
-        <Col>
-          <div className="sidebarIng">
+        <Col >
+          <div className="sidebarIng ingCol">
             <div className="sidebarIngItem">
               <span className="sidebarIngTitle">RECIPE</span>
               <Row>

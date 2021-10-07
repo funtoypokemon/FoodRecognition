@@ -14,6 +14,7 @@ export default function Sidebar() {
     };
     getCats();
   }, []);
+  console.log(cats)
   return (
     <div className="sidebar">
       <div className="sidebarItem">
@@ -29,10 +30,9 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
-          {cats.map((c) => (
-            <Link to={`${apiUrl}/?cat=${c.name}`} className="link">
-              {" "}
-              {/* <Link to={`/?cat=${c.name}`} className="link"> */}
+          {cats.map((c, index) => (
+            // <Link to={`${apiUrl}/?cat=${c.name}`} className="link">
+            <Link key={index} to={`/?cat=${c.name}`} className="link">
               <li className="sidebarListItem">{c.name}</li>
             </Link>
           ))}

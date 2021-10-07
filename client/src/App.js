@@ -13,6 +13,7 @@ import Food from "./views/Food";
 import Ingredient from "./views/Ingredient";
 import Blog from "./views/Blog";
 import Write from "./views/Write";
+import SinglePost from "./components/singlePost/SinglePost";
 //import About from "./views/About";
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
             <ProtectedRoute exact path="/dashboard" component={Dashboard} />
             {/* <ProtectedRoute exact path="/food" component={Food} /> */}
             <ProtectedRoute exact path="/ingredient" component={Ingredient} />
-            <ProtectedRoute path="/post/:postId" />
+            <ProtectedRoute path="/post/:postId" component={SinglePost} />
+            <ProtectedRoute path="/post/:postId" component={SinglePost} />
             {/* <ProtectedRoute exact path="/about" component={About} /> */}
           </Switch>
         </Router>
