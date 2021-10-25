@@ -10,9 +10,17 @@
 }
 .loBtn{
     background: linear-gradient(90deg, rgb(248, 97, 155) 0%, rgb(202, 164, 121) 100%);
-    width:127px;
-    height:54px;
+    width:60px;
+    height:56px;
     font-size: 15px;
+    border-radius: 15px;
+    /* display: inline-block; */
+}
+.logoutText{
+  display: inline-block;
+  /* position:absolute; */
+  margin-top: 10px;
+  margin-left:10px;
 }
 .headroom {
     top: 0;
@@ -34,4 +42,11 @@
   .headroom--pinned {
     position: fixed;
     transform: translateY(0%);
+  }
+
+  .laCuisineLogo{
+    display: inline-block;
+  }
+  .laCuisineText{
+    display: inline-block;
   }

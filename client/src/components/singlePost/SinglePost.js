@@ -7,6 +7,7 @@ import { hostUrl, apiUrl } from "../../contexts/constants";
 import "./singlePost.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
 
 export default function SinglePost() {
   const location = useLocation();
@@ -79,35 +80,28 @@ export default function SinglePost() {
                 >
                   <FontAwesomeIcon icon="edit" color="#ffffff" />
                 </Button>
-                <Button
-                  className="singlePostIcon"
-                  onClick={handleDelete}
-                >
+                <Button className="singlePostIcon" onClick={handleDelete}>
                   <FontAwesomeIcon icon="trash" color="#ffffff" />
                 </Button>
-                {/* <i
-                  className="singlePostIcon fas fa-edit"
-                  onClick={() => setUpdateMode(true)}
-                ></i>
-                <i
-                  className="singlePostIcon fas fa-trash"
-                  
-                ></i> */}
               </div>
             )}
           </h1>
         )}
+
         <div className="singlePostInfo">
-          <span className="singlePostAuthor">
-            Author:
-            <Link to={`/?user=${post.username}`} className="link">
-              {/* Wrongpath? */}
-              <b> {post.username}</b>
-            </Link>
-          </span>
-          <span className="singlePostDate">
-            {new Date(post.createdAt).toDateString()}
-          </span>
+          <Row>
+            <span className="singlePostAuthor">
+              Author:
+              <Link to={`/?user=${post.username}`} className="link">
+                <b> {post.username}</b>
+              </Link>
+            </span>
+          </Row>
+          <Row>
+            <span className="singlePostDate">
+              {new Date(post.createdAt).toDateString()}
+            </span>
+          </Row>
         </div>
         {updateMode ? (
           <textarea

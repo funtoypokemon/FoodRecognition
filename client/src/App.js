@@ -14,7 +14,7 @@ import Ingredient from "./views/Ingredient";
 import Blog from "./views/Blog";
 import Write from "./views/Write";
 import SinglePost from "./components/singlePost/SinglePost";
-//import About from "./views/About";
+import Aboutme from "./views/Aboutme";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
       <PostContextProvider>
         <Router>
           <Switch>
-            <Route exact path="/" component={Landing} />
+            <Route exact path="/landing" component={Landing} />
             <Route
               exact
               path="/login"
@@ -33,13 +33,14 @@ function App() {
               path="/register"
               render={(props) => <Auth {...props} authRoute="register" />}
             />
-            <ProtectedRoute exact path="/blog" component={Blog} />
+            <ProtectedRoute exact path="/" component={Blog} />
             <ProtectedRoute exact path="/write" component={Write} />
             <ProtectedRoute exact path="/dashboard" component={Dashboard} />
-            {/* <ProtectedRoute exact path="/food" component={Food} /> */}
             <ProtectedRoute exact path="/ingredient" component={Ingredient} />
             <ProtectedRoute path="/post/:postId" component={SinglePost} />
-            <ProtectedRoute path="/post/:postId" component={SinglePost} />
+            <ProtectedRoute path="/food" component={Food} />
+            <ProtectedRoute path="/aboutme" component={Aboutme} />
+
             {/* <ProtectedRoute exact path="/about" component={About} /> */}
           </Switch>
         </Router>

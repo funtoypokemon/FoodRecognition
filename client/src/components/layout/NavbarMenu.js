@@ -8,6 +8,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { useContext } from "react";
 import Headroom from "react-headroom";
 import "./navbar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavbarMenu = () => {
   const { logoutUser } = useContext(AuthContext);
@@ -19,9 +20,7 @@ const NavbarMenu = () => {
   } = useContext(AuthContext);
 
   return (
-    <Headroom
-      className=""
-    >
+    <Headroom className="">
       <Navbar
         expand="lg"
         bg="primary"
@@ -34,10 +33,10 @@ const NavbarMenu = () => {
             alt="laCuisineLogo"
             width="32"
             height="32"
-            className="mr-2"
+            className="mr-2 laCuisineLogo"
             style={{ marginLeft: 10 }}
           />
-          LaCuisine
+          <a className="laCuisineText">LaCuisine</a>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
@@ -45,7 +44,7 @@ const NavbarMenu = () => {
           <Nav className="mr-auto">
             <Nav.Link
               className="font-weight-bolder text-white btnBHide btnBDisplay"
-              to="/blog"
+              to="/"
               as={Link}
             >
               Blog
@@ -84,7 +83,7 @@ const NavbarMenu = () => {
 
             <Nav.Link
               className="font-weight-bolder text-white btnBHide btnBDisplay"
-              to="/about"
+              to="/aboutme"
               as={Link}
             >
               About
@@ -107,7 +106,6 @@ const NavbarMenu = () => {
               height="32"
               className="mr-2"
             />
-            Logout
           </Button>
           <Nav></Nav>
         </Nav>

@@ -5,8 +5,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faTrash, faEdit, faPlus, faImages } from "@fortawesome/free-solid-svg-icons";
-library.add(faTrash, faEdit, faPlus, faImages);
+import {
+  faTrash,
+  faEdit,
+  faPlus,
+  faImages,
+  faWrench,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faTrash, faEdit, faPlus, faImages, faWrench);
 
 ReactDOM.render(
   <React.StrictMode>
