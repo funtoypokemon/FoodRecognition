@@ -8,7 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./food.css";
 
-const Ingredient = () => {
+const Food = () => {
   const [imgfile, setImgFile] = useState(null);
   const handleUpload = async (e) => {
     e.preventDefault();
@@ -35,7 +35,7 @@ const Ingredient = () => {
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
 
-  const getIngre = async () => {
+  const getFood = async () => {
     try {
       const res = await axios.get(`${pythonUrl}/predict`);
       setTitles(res.data.title);
@@ -106,7 +106,7 @@ const Ingredient = () => {
         </div>
         <Card className="text-center mx-5 my-5 ingCol">
           <Card.Body>
-            <Button variant="primary" onClick={getIngre}>
+            <Button variant="primary" onClick={getFood}>
               Predict
             </Button>
           </Card.Body>
@@ -148,4 +148,4 @@ const Ingredient = () => {
   );
 };
 
-export default Ingredient;
+export default Food;

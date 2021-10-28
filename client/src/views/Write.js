@@ -1,11 +1,11 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import "./write.css";
 import axios from "axios";
-import { Context } from "../contexts/Context";
-import { apiUrl, hostUrl } from "../contexts/constants";
+// import { Context } from "../contexts/Context";
+import { apiUrl } from "../contexts/constants";
 import { AuthContext } from "../contexts/AuthContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 

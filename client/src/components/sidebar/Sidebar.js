@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { apiUrl, hostUrl } from "../../contexts/constants";
+import { apiUrl } from "../../contexts/constants";
 import "./sidebar.css";
 
 export default function Sidebar() {

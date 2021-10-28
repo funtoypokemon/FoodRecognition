@@ -13,8 +13,8 @@ import SinglePost from "../components/posts/SinglePost";
 import AddPostModal from "../components/posts/AddPostModal";
 import UpdatePostModal from "../components/posts/UpdatePostModal";
 import addIcon from "../assets/plus-circle-fill.svg";
-import Ingredient from "./Ingredient";
-import Dropzone from "../utils/dropzone";
+// import Ingredient from "./Ingredient";
+// import Dropzone from "../utils/dropzone";
 
 const Dashboard = () => {
   // Contexts

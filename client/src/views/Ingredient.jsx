@@ -1,7 +1,7 @@
 //import Dropzone from "../utils/dropzone.jsx";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { apiUrl, pythonUrl } from "../contexts/constants";
+import { pythonUrl } from "../contexts/constants";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -23,9 +23,9 @@ const Ingredient = () => {
       var options = { content: formData };
 
       console.log(options);
-      const res = await axios.post(`${apiUrl}/posts/uploads`, formData, {
-        headers: { "content-type": "multipart/form-data" },
-      });
+      // const res = await axios.post(`${apiUrl}/posts/uploads`, formData, {
+      //   headers: { "content-type": "multipart/form-data" },
+      // });
     } catch (err) {
       alert(err.response.data.msg);
     }
@@ -95,7 +95,6 @@ const Ingredient = () => {
           type="file"
           id="file"
           name="file"
-
           className="custom-file-input"
           style={{ marginTop: 20, marginLeft: 49 }}
           onChange={handleUpload}
@@ -120,7 +119,7 @@ const Ingredient = () => {
     <>
       <Row>
         <Col>{body}</Col>
-        <Col >
+        <Col>
           <div className="sidebarIng ingCol">
             <div className="sidebarIngItem">
               <span className="sidebarIngTitle">RECIPE</span>

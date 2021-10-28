@@ -8,7 +8,7 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { useContext } from "react";
 import Headroom from "react-headroom";
 import "./navbar.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavbarMenu = () => {
   const { logoutUser } = useContext(AuthContext);

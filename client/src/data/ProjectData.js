@@ -1,69 +1,33 @@
 export const ProjectList = [
   {
-    img: "https://gurupawar.github.io/portfolio/assets/project_1.png",
-    title: "Spense",
-    description: "Codewell challenge, Spense is a landing page for writers.",
-    tech_stack: "Html, Css, Javascript",
-    github_url: "https://github.com/gurupawar/spense",
+    img: "https://i.ibb.co/th1c2CR/mrvans-8188d58.jpg",
+    title: "MrVans",
+    description:
+      "MrVans is a website for local startup in the office lunch industry located in HCM city",
+    tech_stack: "Vuejs, Springboot, MongoDB",
+    github_url: "https://github.com/funtoypokemon/mrvans-website",
     demo_url: "https://gurupawar.github.io/spense/",
   },
   {
-    img: "https://gurupawar.github.io/portfolio/assets/project_2.png",
-    title: "Fiber",
+    img: "https://i.ibb.co/GJP29rx/LP.png",
+    title: "License Plate Tracker",
     description:
-      "An online portfolio generator. Great to practice flex/grid layouts, absolute positioning and sliders.",
-    tech_stack: "Html, Css, Javascript",
-    github_url: "https://github.com/gurupawar/fiber",
+      "An online license plate recognition. Using machine learning algorithm to processing license plate images.",
+    tech_stack: "MongoDB, Expressjs, Vuejs, Nodejs, Python, Flask, Java",
+    github_url: "https://github.com/orgs/PROJECT-LiPT/dashboard",
     demo_url: "https://gurupawar.github.io/fiber/",
   },
   {
-    img: "https://gurupawar.github.io/portfolio/assets/portfolio.png",
-    title: "Portfolio",
-    description: "Ofcourse i made my own personal portfolio website.",
-    tech_stack: "Reactjs, Css",
-    github_url: "https://github.com/gurupawar/portfolio-react",
+    img: "https://i.ibb.co/4NtxJwd/lacuisine.png",
+    title: "LaCuisine",
+    description: "An online food recognition using DeepLearning.",
+    tech_stack:
+      "MongoDB, Expressjs, Reactjs, Nodejs, Python, Flask, Selenium, Pytorch, Tensorflow",
+    github_url: "https://github.com/funtoypokemon/FoodRecognition",
     demo_url: "https://gportfolio.vercel.app/",
-  },
-  {
-    img: "https://gurupawar.github.io/portfolio/assets/project_3.png",
-    title: "Ecommerce website",
-    description:
-      "Created simple ecommerce website using reactjs and react-use-cart plugin.",
-    tech_stack: "Reactjs, Css",
-    github_url: "https://github.com/gurupawar/ecommerce-react-app",
-    demo_url: "https://ecommerce-react-app.vercel.app/",
   },
 ];
 
 // --------------------------------------- Skills
 
-export const stackList = [
-  {
-    img: "https://gurupawar.github.io/portfolio/assets/skill/html5.svg",
-    name: "HTML",
-  },
-  {
-    img: "https://gurupawar.github.io/portfolio/assets/skill/css3.svg",
-    name: "CSS",
-  },
-  {
-    img: "https://gurupawar.github.io/portfolio/assets/skill/javascript.svg",
-    name: "JavaScript",
-  },
-  {
-    img: "https://gurupawar.github.io/portfolio/assets/skill/bootstrap.svg",
-    name: "Bootstrap",
-  },
-  {
-    img: "https://gurupawar.github.io/portfolio/assets/skill/sass.svg",
-    name: "Scss",
-  },
-  {
-    img: "https://gurupawar.github.io/portfolio/assets/skill/git.svg",
-    name: "Git",
-  },
-  {
-    img: "https://gurupawar.github.io/portfolio/assets/skill/responsive.svg",
-    name: "Responsive",
-  },
-];
+export const stackList = [];

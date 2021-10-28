@@ -8,7 +8,7 @@ function Contact() {
         <div className="SectionTitle">Get In Touch</div>
         <div className="BigCard">
           <Email>
-            <span>loib1704830@student.ctu.edu.vn</span>
+            <span style={{ fontSize: 25 }}>loib1704830@student.ctu.edu.vn</span>
             <a
               className="btn PrimaryBtn"
               href="mailto:loib1704830@student.ctu.edu.vn"

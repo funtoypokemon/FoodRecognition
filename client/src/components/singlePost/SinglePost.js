@@ -1,16 +1,16 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
-import { hostUrl, apiUrl } from "../../contexts/constants";
+import { apiUrl } from "../../contexts/constants";
 import "./singlePost.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 
 export default function SinglePost() {
-  const location = useLocation();
+  // const location = useLocation();
 
   //const path = location.pathname.split("/")[2];
   const { postId } = useParams();

@@ -26,9 +26,7 @@ function About() {
             Programming helps people to have a better life, it is the weapon
             that helps people to step even closer to the future
           </div>
-          <div className="AboutBio tagline2">
-            I have become confident using the following technologies.
-          </div>
+          <div className="AboutBio tagline2"></div>
           <Technologies>
             {stackList.map((stack, index) => (
               <Tech key={index} className="tech">

@@ -1,4 +1,3 @@
-import Header from "../components/header/Header";
 import { useState, useEffect } from "react";
 import Posts from "../components/posts/Posts";
 import Sidebar from "../components/sidebar/Sidebar";
@@ -28,7 +27,7 @@ export default function Blog() {
       {/* <Header /> */}
 
       <div className="container">
-        <img className="coImg" src={cover} />
+        <img className="coImg" src={cover} alt="cover" />
         <h3 data-aos="fade-in">What's Cooking in the Kitchen?</h3>
         <h1 data-aos="fade-in">Le Blog Culinaire</h1>
       </div>
