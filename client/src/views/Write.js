@@ -21,56 +21,65 @@ export default function Write() {
   } = useContext(AuthContext);
 
   /////
-   state = {
-    isLifeStyle: false,
-    isBetterLife: false,
-    isTravel: false,
-    isFood: false,
-    isFamily: false,    
-    isHappiness: false
-  };
+  const [lifestyle, setLifeStyle] = useState(false);
+  const [betterlife, setBetterLife] = useState(false);
+  const [travel, setTravel] = useState(false);
+  const [food, setFood] = useState(false);
+  const [family, setFamily] = useState(false);
+  const [happiness, setHappiness] = useState(false);
 
-  toggleChangeLifeStyle = () => {
-    this.setState(prevState => ({
-      isLifeStyle: !prevState.isLifeStyle,
-    }));
+  const onChangeLifeStyle = () => {
+    setLifeStyle(lifestyle => !lifestyle)
   }
-  toggleChangeBetterLife = () => {
-    this.setState(prevState => ({
-      isBetterLife: !prevState.isBetterLife,
-    }));
+  const onChangeBetterLife = () => {
+    setBetterLife(betterlife => !betterlife)
   }
-  toggleChangeTravel = () => {
-    this.setState(prevState => ({
-      isTravel: !prevState.isTravel,
-    }));
+  const onChangeTravel = () => {
+    setTravel(travel => !travel)
   }
-  toggleChangeFood = () => {
-    this.setState(prevState => ({
-      isFood: !prevState.isFood,
-    }));
+  const onChangeFood = () => {
+    setFood(food => !food)
   }
 
-  toggleChangeFamily = () => {
-    this.setState(prevState => ({
-      isFamily: !prevState.isFamily,
-    }));
+  const onChangeFamily = () => {
+    setFamily(family => !family)
   }
 
-  toggleChangeHappiness = () => {
-    this.setState(prevState => ({
-      isHappiness: !prevState.isHappiness,
-    }));
+  const onChangeHappiness = () => {
+    setHappiness(happiness => !happiness)
   }
 
   /////
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    let categories = [];
+
+    if(lifestyle){
+      categories.push('LifeStyle')
+    }
+    if(betterlife){
+      categories.push('BetterLife')
+    }
+    if(travel){
+      categories.push('Travel')
+    }
+    if(food){
+      categories.push('Food')
+    }
+    if(family){
+      categories.push('Family')
+    }
+    if(happiness){
+      categories.push('Happiness')
+    }
+    
     const newPost = {
       username: username,
       title,
       desc,
+      categories,
     };
     if (file) {
       const data = new FormData();
@@ -130,17 +139,23 @@ export default function Write() {
             </button>
           </Row>
           <Row className="publishCol">
-            <input className="inputBox" type="checkbox" name="LifeStyle" />
+            <input className="inputBox" type="checkbox" name="LifeStyle"  checked={lifestyle}
+                onChange={onChangeLifeStyle} />
             LifeStyle&nbsp;&nbsp;
-            <input className="inputBox" type="checkbox" name="BetterLife" />
+            <input className="inputBox" type="checkbox" name="BetterLife"  checked={betterlife}
+                onChange={onChangeBetterLife}/>
             BetterLife&nbsp;&nbsp;
-            <input className="inputBox" type="checkbox" name="Travel" />
+            <input className="inputBox" type="checkbox" name="Travel"  checked={travel}
+                onChange={onChangeTravel}/>
             Travel&nbsp;&nbsp;
-            <input className="inputBox" type="checkbox" name="Food" />
+            <input className="inputBox" type="checkbox" name="Food"  checked={food}
+                onChange={onChangeFood}/>
             Food&nbsp;&nbsp;
-            <input className="inputBox" type="checkbox" name="Family" />
+            <input className="inputBox" type="checkbox" name="Family"  checked={family}
+                onChange={onChangeFamily}/>
             Family&nbsp;&nbsp;
-            <input className="inputBox" type="checkbox" name="Happiness" />
+            <input className="inputBox" type="checkbox" name="Happiness"  checked={happiness}
+                onChange={onChangeHappiness}/>
             Happiness&nbsp;&nbsp;
           </Row>
         </Col>
