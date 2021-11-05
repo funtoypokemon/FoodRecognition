@@ -31,3 +31,13 @@
  .ingCol{
     box-shadow: 0 2px 20px gray;
  }
+ .ingPredict{
+    font-family: 'OpenSans', serif;
+    padding-left:45px;
+    padding-right:45px;
+    font-weight: 3px;
+ }
+ .ingTitlePredict{
+    font-size:25px;
+    font-weight: 5px;
+ }

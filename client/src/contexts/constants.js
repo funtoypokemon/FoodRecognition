@@ -9,6 +9,7 @@ export const cliUrl = "http://localhost:3000";
 //base url
 //baseurl/predict
 export const pythonUrl = "http://localhost:80";
+export const foodUrl = "http://localhost:85"
 
 export const LOCAL_STORAGE_TOKEN_NAME = "learnit-mern";
 

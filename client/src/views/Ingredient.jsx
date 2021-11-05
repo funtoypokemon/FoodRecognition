@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./ingredient.css";
+import {apiUrl} from "../contexts/constants"
 
 const Ingredient = () => {
   const [imgfile, setImgFile] = useState(null);
@@ -23,9 +24,9 @@ const Ingredient = () => {
       var options = { content: formData };
 
       console.log(options);
-      // const res = await axios.post(`${apiUrl}/posts/uploads`, formData, {
-      //   headers: { "content-type": "multipart/form-data" },
-      // });
+      const res = await axios.post(`${apiUrl}/posts/uploads`, formData, {
+        headers: { "content-type": "multipart/form-data" },
+      });
     } catch (err) {
       alert(err.response.data.msg);
     }

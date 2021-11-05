@@ -20,6 +20,51 @@ export default function Write() {
     },
   } = useContext(AuthContext);
 
+  /////
+   state = {
+    isLifeStyle: false,
+    isBetterLife: false,
+    isTravel: false,
+    isFood: false,
+    isFamily: false,    
+    isHappiness: false
+  };
+
+  toggleChangeLifeStyle = () => {
+    this.setState(prevState => ({
+      isLifeStyle: !prevState.isLifeStyle,
+    }));
+  }
+  toggleChangeBetterLife = () => {
+    this.setState(prevState => ({
+      isBetterLife: !prevState.isBetterLife,
+    }));
+  }
+  toggleChangeTravel = () => {
+    this.setState(prevState => ({
+      isTravel: !prevState.isTravel,
+    }));
+  }
+  toggleChangeFood = () => {
+    this.setState(prevState => ({
+      isFood: !prevState.isFood,
+    }));
+  }
+
+  toggleChangeFamily = () => {
+    this.setState(prevState => ({
+      isFamily: !prevState.isFamily,
+    }));
+  }
+
+  toggleChangeHappiness = () => {
+    this.setState(prevState => ({
+      isHappiness: !prevState.isHappiness,
+    }));
+  }
+
+  /////
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newPost = {

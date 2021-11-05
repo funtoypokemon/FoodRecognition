@@ -123,7 +123,8 @@ router.post("/uploads", (req, res) => {
   if (req.files) {
     console.log(req.files);
     var file = req.files.file;
-    var filename = file.name;
+    var filename = file.name; //change file
+    //var filename = "picture.jpg";
     console.log(filename);
 
     file.mv("./data/demo_imgs/" + filename, function (err) {
