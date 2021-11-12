@@ -29,25 +29,25 @@ export default function Write() {
   const [happiness, setHappiness] = useState(false);
 
   const onChangeLifeStyle = () => {
-    setLifeStyle(lifestyle => !lifestyle)
-  }
+    setLifeStyle((lifestyle) => !lifestyle);
+  };
   const onChangeBetterLife = () => {
-    setBetterLife(betterlife => !betterlife)
-  }
+    setBetterLife((betterlife) => !betterlife);
+  };
   const onChangeTravel = () => {
-    setTravel(travel => !travel)
-  }
+    setTravel((travel) => !travel);
+  };
   const onChangeFood = () => {
-    setFood(food => !food)
-  }
+    setFood((food) => !food);
+  };
 
   const onChangeFamily = () => {
-    setFamily(family => !family)
-  }
+    setFamily((family) => !family);
+  };
 
   const onChangeHappiness = () => {
-    setHappiness(happiness => !happiness)
-  }
+    setHappiness((happiness) => !happiness);
+  };
 
   /////
 
@@ -56,25 +56,25 @@ export default function Write() {
 
     let categories = [];
 
-    if(lifestyle){
-      categories.push('LifeStyle')
+    if (lifestyle) {
+      categories.push("LifeStyle");
     }
-    if(betterlife){
-      categories.push('BetterLife')
+    if (betterlife) {
+      categories.push("BetterLife");
     }
-    if(travel){
-      categories.push('Travel')
+    if (travel) {
+      categories.push("Travel");
     }
-    if(food){
-      categories.push('Food')
+    if (food) {
+      categories.push("Food");
     }
-    if(family){
-      categories.push('Family')
+    if (family) {
+      categories.push("Family");
     }
-    if(happiness){
-      categories.push('Happiness')
+    if (happiness) {
+      categories.push("Happiness");
     }
-    
+
     const newPost = {
       username: username,
       title,
@@ -139,23 +139,53 @@ export default function Write() {
             </button>
           </Row>
           <Row className="publishCol">
-            <input className="inputBox" type="checkbox" name="LifeStyle"  checked={lifestyle}
-                onChange={onChangeLifeStyle} />
+            <input
+              className="inputBox"
+              type="checkbox"
+              name="LifeStyle"
+              checked={lifestyle}
+              onChange={onChangeLifeStyle}
+            />
             LifeStyle&nbsp;&nbsp;
-            <input className="inputBox" type="checkbox" name="BetterLife"  checked={betterlife}
-                onChange={onChangeBetterLife}/>
+            <input
+              className="inputBox"
+              type="checkbox"
+              name="BetterLife"
+              checked={betterlife}
+              onChange={onChangeBetterLife}
+            />
             BetterLife&nbsp;&nbsp;
-            <input className="inputBox" type="checkbox" name="Travel"  checked={travel}
-                onChange={onChangeTravel}/>
+            <input
+              className="inputBox"
+              type="checkbox"
+              name="Travel"
+              checked={travel}
+              onChange={onChangeTravel}
+            />
             Travel&nbsp;&nbsp;
-            <input className="inputBox" type="checkbox" name="Food"  checked={food}
-                onChange={onChangeFood}/>
+            <input
+              className="inputBox"
+              type="checkbox"
+              name="Food"
+              checked={food}
+              onChange={onChangeFood}
+            />
             Food&nbsp;&nbsp;
-            <input className="inputBox" type="checkbox" name="Family"  checked={family}
-                onChange={onChangeFamily}/>
+            <input
+              className="inputBox"
+              type="checkbox"
+              name="Family"
+              checked={family}
+              onChange={onChangeFamily}
+            />
             Family&nbsp;&nbsp;
-            <input className="inputBox" type="checkbox" name="Happiness"  checked={happiness}
-                onChange={onChangeHappiness}/>
+            <input
+              className="inputBox"
+              type="checkbox"
+              name="Happiness"
+              checked={happiness}
+              onChange={onChangeHappiness}
+            />
             Happiness&nbsp;&nbsp;
           </Row>
         </Col>
